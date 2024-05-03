@@ -44,4 +44,19 @@ class ExampleStateMachineDependencyProvider extends AbstractBundleDependencyProv
 
         return $container;
     }
+
+    protected function provideViolation()
+    {
+        return true;
+    }
+
+    protected function addSomething()
+    {
+        return $this->getAnotherViolation();
+    }
+
+    protected function getAnotherViolation()
+    {
+        return 1;
+    }
 }
