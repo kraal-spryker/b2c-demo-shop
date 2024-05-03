@@ -3,11 +3,18 @@ language: "en-US"
 early_access: false
 reviews:
     profile: "chill"
-    request_changes_workflow: false
+    request_changes_workflow: true
     high_level_summary: true
     poem: true
     review_status: true
     collapse_walkthrough: false
+    path_instructions:
+        -   path: "**/*.php"
+            instructions:
+                "Review the PHP code for conformity with the Spryker coding standarts, highlighting any deviations."
+        -   path: "**/*.transfer.xml"
+            instructions:
+                "All new transfers and properties should be marked as strict, highlighting any deviations."
     auto_review:
         enabled: true
         ignore_title_keywords:
