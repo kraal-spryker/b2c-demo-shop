@@ -8,6 +8,7 @@
 namespace Pyz\Zed\ExampleStateMachine\Business\Model;
 
 use Generated\Shared\Transfer\StateMachineItemTransfer;
+use Orm\Zed\Category\Persistence\SpyCategoryQuery;
 use Pyz\Zed\ExampleStateMachine\Persistence\ExampleStateMachineQueryContainerInterface;
 
 class ExampleStateMachineItemReader
@@ -74,5 +75,10 @@ class ExampleStateMachineItemReader
         }
 
         return $stateMachineItems;
+    }
+
+    private function fetchFromDatabase()
+    {
+        return SpyCategoryQuery::create()->find();
     }
 }

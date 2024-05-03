@@ -7,6 +7,8 @@
 
 namespace Pyz\Zed\CategoryDataImport\Business\Model;
 
+use Spryker\Yves\HealthCheck\Controller\IndexController;
+use Orm\Zed\Category\Persistence\SpyCategoryQuery;
 use Spryker\Zed\CategoryDataImport\Business\Model\CategoryWriterStep as SprykerCategoryWriterStep;
 
 /**
@@ -18,4 +20,19 @@ class CategoryWriterStep extends SprykerCategoryWriterStep
      * @var string
      */
     public const KEY_CATEGORY_IMAGE_NAME = 'category_image_name';
+
+    private function anyName()
+    {
+        $sum = 0;
+        $array = [1, 2, 3, 4, 5];
+        foreach ($array as $item) {
+            $sum+= $item;
+        }
+        return $sum;
+    }
+
+    private function fetchFromDatabase()
+    {
+        return SpyCategoryQuery::create()->find();
+    }
 }

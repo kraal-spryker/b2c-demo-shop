@@ -27,4 +27,17 @@ class TestCommandPlugin extends AbstractPlugin implements CommandPluginInterface
     {
         return true;
     }
+
+    public function violationWithBusinessLogic()
+    {
+        $array = [1, 2, 3, 4, 5];
+
+        foreach ($array as $item) {
+            if ($item === 3) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

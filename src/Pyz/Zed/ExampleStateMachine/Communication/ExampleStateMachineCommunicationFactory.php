@@ -24,4 +24,9 @@ class ExampleStateMachineCommunicationFactory extends AbstractCommunicationFacto
     {
         return $this->getProvidedDependency(ExampleStateMachineDependencyProvider::FACADE_STATE_MACHINE);
     }
+
+    protected function onlyPublicMethodsAllowedViolation()
+    {
+        return true;
+    }
 }
