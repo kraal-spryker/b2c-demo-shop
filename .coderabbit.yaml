@@ -14,7 +14,7 @@ reviews:
                 "Review the PHP code for conformity with the Spryker coding standarts, highlighting any deviations."
         -   path: "**/*.transfer.xml"
             instructions:
-                "All new transfers and properties should be marked as strict, highlighting any deviations."
+                "All new transfers and properties should be marked  strict=\"true\", highlighting any deviations."
     auto_review:
         enabled: true
         ignore_title_keywords:
