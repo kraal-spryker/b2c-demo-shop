@@ -5,6 +5,7 @@
         <property name="productAbstractSku" type="string"/>
         <property name="storeName" type="string"/>
         <property name="bla" type="string"/>
+        <property name="blabla" type="string"/>
     </transfer>
 
 </transfers>
